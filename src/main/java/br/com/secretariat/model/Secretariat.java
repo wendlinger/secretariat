@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotBlank;
 
 import com.sun.istack.NotNull;
@@ -34,9 +33,9 @@ public class Secretariat {
 	private String secretary;
 	
 	@NotNull
-	@NotBlank
 	private int populationGrade;
 	
-	private boolean underInvestigation;
+	@NotNull
+	private boolean underInvestigation = false;
 	
 }
